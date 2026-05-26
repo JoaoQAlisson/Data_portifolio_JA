@@ -230,16 +230,7 @@ body {
     object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
     display: block; /* Remove espaços vazios na base da imagem */
     /* Filtro opcional para deixar P&B e combinando com o tema (remova se preferir colorida) */
-    /* filter: grayscale(100%); */
-    /* transition: filter 0.4s ease; */
-}
 
-/* Ativa a cor na imagem ao passar o mouse (se o filtro P&B estiver ativado) */
-/* .about-image-container:hover .about-image {
-    filter: grayscale(0%);
-} */
-
-/* --- Estilos Existentes (Mantidos) --- */
 .label {
     color: var(--accent);
     font-size: 0.8rem;
@@ -528,12 +519,7 @@ footer {
     height: 60px; /* Ajuste a altura conforme preferir */
     width: auto;
     display: block;
-    
-    /* --- O TRUQUE MÁGICO --- */
-    /* 'screen' mantém os tons claros e esconde os escuros.
-       Como seu logo é preto em fundo branco, primeiro invertemos 
-       as cores (fica branco em fundo preto) e depois usamos o blend mode 
-       para garantir que qualquer imperfeição do fundo suma. */
+
     
     filter: invert(1); /* Transforma o logo preto em branco */
     mix-blend-mode: screen; /* Garante que o fundo branco original fique transparente no site dark */
@@ -574,4 +560,25 @@ footer {
     background-color: rgba(241, 196, 15, 0.1); /* Amarelo transparente */
     color: #f1c40f;
     border: 1px solid rgba(241, 196, 15, 0.5);
+}
+
+/* Estilo discreto para atribuição de direitos autorais */
+.attribution-text {
+    font-size: 0.75rem; /* Texto bem pequeno */
+    color: rgba(255, 255, 255, 0.3); /* Cinza bem escuro/sutil sobre o fundo preto */
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+}
+
+.attribution-text a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    transition: color 0.3s ease;
+}
+
+/* O link só ganha um leve destaque se a pessoa passar o mouse por cima */
+.attribution-text a:hover {
+    color: var(--accent); /* Acende com o seu azul padrão */
+    border-bottom: 1px solid var(--accent);
 }
