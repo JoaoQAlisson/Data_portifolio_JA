@@ -429,6 +429,12 @@ footer {
     font-weight: bold;
 }
 
+.kaggle-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .separator {
     width: 60px;
     border: 1px solid var(--border);
